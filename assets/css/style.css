@@ -1,0 +1,62 @@
+/*****  PARA RESOLVER O PROBLEMA DO MENU-FIXO *******
+    ************** MENU TOPO FIXO *******************
+VERIFICAR A ALTURA DO MENU EX: 75px, ADICIONAR UM PADDING NO BODY O MESMO TAMANHO DA ALTURA DO MENU. POIS O CONTEUDO ESTÁ EM BAIXO DO MENU.
+*/
+body {
+    padding-top: 75px;
+}
+
+
+/* ADICIONANDO SOMBRA DEGRADE */
+.box-shadow{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.05),
+                0 4px 8px 0 rgba(0,0,0,.05);
+        
+}
+
+/* AQUI ESTÁ ALINHANDO OS ICONES NA PARTE DE VANTAGENS, PARA FICAR ALINHADOS NA MESMA LINHA POR CONTA DO FLEXBOX */
+
+.icone{
+    height: 100px;
+}
+
+#home-quote {
+    background: url('../img/bg-quote.jpg') center center;
+    background-size: cover; /* COBRINDO A AREA INTEIRA DO BACKGROUND AUMENTANDO OU DIMINUINDO PONTA A PONTA LATERAL */
+}
+
+/* ISSO AQUI É UM MACETE PARA NAO ADICIONAR BORDA NO ULTIMO LI */
+/* LI + LI vai pegar o li e seu proximo até o fim, para isso usou o BORDER TOP */
+.lista-plano li + li {
+     border-top: solid 1px rgba(0,0,0,.2);
+}
+
+.lista-plano li {
+   
+    padding: 1rem;
+}
+
+
+
+
+/* ESTÁ DETERMINANDO QUE ATÉ 767px AS LETRAS DO HOME-QUOTE VAI SER MENOR */
+@media (max-width: 767px){
+    #home-quote .display-4{
+        font-size: 2.5rem;
+    }
+    /* TIRANDO MENU TOPO FIXO ATÉ 767px, SÓ APATIR DO 768px FICA FIXO */
+    body {
+        padding-top: 0px;
+    }
+    
+    .fixed-top {
+        position: relative;
+    }
+    
+}
+
+@media (min-width: 768px){
+    .valorPlatinum{
+        padding-left: 0px;
+    }
+}
